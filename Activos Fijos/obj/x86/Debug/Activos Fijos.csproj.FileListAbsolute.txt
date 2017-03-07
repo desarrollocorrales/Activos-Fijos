@@ -1,0 +1,13 @@
+G:\Github\Activos-Fijos\Activos Fijos\bin\Debug\Activos Fijos.exe
+G:\Github\Activos-Fijos\Activos Fijos\bin\Debug\Activos Fijos.pdb
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos_Fijos.Properties.Resources.resources
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos Fijos.csproj.GenerateResource.Cache
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos Fijos.exe
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos Fijos.pdb
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos_Fijos.GUIs.Frm_Login.resources
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos_Fijos.GUIs.Frm_Principal.resources
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos Fijos.exe.licenses
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos_Fijos.GUIs.SubFrm_Activos.resources
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos_Fijos.GUIs.SubFrm_Grupos.resources
+G:\Github\Activos-Fijos\Activos Fijos\obj\x86\Debug\Activos Fijos.csprojResolveAssemblyReference.cache
+G:\Github\Activos-Fijos\Activos Fijos\bin\Debug\Activos Fijos.exe.config

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ActivosFijosModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ActivosFijosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bitacora_activos" EntityType="ActivosFijosModel.bitacora_activos" />
+    <EntitySet Name="catalogo_estatus" EntityType="ActivosFijosModel.catalogo_estatus" />
+    <EntitySet Name="clasificaciones" EntityType="ActivosFijosModel.clasificaciones" />
+    <EntitySet Name="grupos" EntityType="ActivosFijosModel.grupos" />
+    <EntitySet Name="grupos_detalles" EntityType="ActivosFijosModel.grupos_detalles" />
+    <EntitySet Name="ubicaciones" EntityType="ActivosFijosModel.ubicaciones" />
+    <EntitySet Name="activos" EntityType="ActivosFijosModel.activos" />
+  </EntityContainer>
+  <EntityType Name="bitacora_activos">
+    <Key>
+      <PropertyRef Name="fecha" />
+      <PropertyRef Name="hora" />
+      <PropertyRef Name="id_activo" />
+    </Key>
+    <Property Name="fecha" Type="DateTime" Nullable="false" />
+    <Property Name="hora" Type="Time" Nullable="false" />
+    <Property Name="id_activo" Type="Int64" Nullable="false" />
+    <Property Name="id_usuario_creador" Type="Int64" Nullable="false" />
+    <Property Name="accion" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="observaciones" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="catalogo_estatus">
+    <Key>
+      <PropertyRef Name="estatus" />
+    </Key>
+    <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="clasificaciones">
+    <Key>
+      <PropertyRef Name="id_clasificacion" />
+    </Key>
+    <Property Name="id_clasificacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="grupos">
+    <Key>
+      <PropertyRef Name="id_grupo" />
+    </Key>
+    <Property Name="id_grupo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="grupos_detalles">
+    <Key>
+      <PropertyRef Name="id_grupo" />
+      <PropertyRef Name="id_activo" />
+    </Key>
+    <Property Name="id_grupo" Type="Int32" Nullable="false" />
+    <Property Name="id_activo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ubicaciones">
+    <Key>
+      <PropertyRef Name="id_ubicacion" />
+    </Key>
+    <Property Name="id_ubicacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="160" Unicode="false" FixedLength="false" />
+    <Property Name="domicilio" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="activos">
+    <Key>
+      <PropertyRef Name="id_activo" />
+    </Key>
+    <Property Type="Int64" Name="id_activo" Nullable="false" />
+    <Property Type="String" Name="nombre_corto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="descripcion_detallada" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="fecha_adquisicion" Nullable="false" />
+    <Property Type="Decimal" Name="costo" Nullable="false" />
+    <Property Type="Int64" Name="id_clasificacion" Nullable="false" />
+    <Property Type="String" Name="codigo_barras" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="fecha_asignacion" />
+    <Property Type="Int32" Name="id_empleado" />
+    <Property Type="Int32" Name="id_ubicacion" />
+    <Property Type="Binary" Name="imagen" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int64" Name="idcompra" />
+    <Property Type="String" Name="estatus" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

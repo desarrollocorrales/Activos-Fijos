@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ActivosFijosModelStoreContainer" CdmEntityContainer="ActivosFijosEntities">
+    <EntitySetMapping Name="bitacora_activos">
+      <EntityTypeMapping TypeName="ActivosFijosModel.bitacora_activos">
+        <MappingFragment StoreEntitySet="bitacora_activos">
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="id_activo" ColumnName="id_activo" />
+          <ScalarProperty Name="id_usuario_creador" ColumnName="id_usuario_creador" />
+          <ScalarProperty Name="accion" ColumnName="accion" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="catalogo_estatus">
+      <EntityTypeMapping TypeName="ActivosFijosModel.catalogo_estatus">
+        <MappingFragment StoreEntitySet="catalogo_estatus">
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clasificaciones">
+      <EntityTypeMapping TypeName="ActivosFijosModel.clasificaciones">
+        <MappingFragment StoreEntitySet="clasificaciones">
+          <ScalarProperty Name="id_clasificacion" ColumnName="id_clasificacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="grupos">
+      <EntityTypeMapping TypeName="ActivosFijosModel.grupos">
+        <MappingFragment StoreEntitySet="grupos">
+          <ScalarProperty Name="id_grupo" ColumnName="id_grupo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="grupos_detalles">
+      <EntityTypeMapping TypeName="ActivosFijosModel.grupos_detalles">
+        <MappingFragment StoreEntitySet="grupos_detalles">
+          <ScalarProperty Name="id_grupo" ColumnName="id_grupo" />
+          <ScalarProperty Name="id_activo" ColumnName="id_activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ubicaciones">
+      <EntityTypeMapping TypeName="ActivosFijosModel.ubicaciones">
+        <MappingFragment StoreEntitySet="ubicaciones">
+          <ScalarProperty Name="id_ubicacion" ColumnName="id_ubicacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="activos">
+      <EntityTypeMapping TypeName="ActivosFijosModel.activos">
+        <MappingFragment StoreEntitySet="activos">
+          <ScalarProperty Name="estatus" ColumnName="estatus" />
+          <ScalarProperty Name="idcompra" ColumnName="idcompra" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="id_ubicacion" ColumnName="id_ubicacion" />
+          <ScalarProperty Name="id_empleado" ColumnName="id_empleado" />
+          <ScalarProperty Name="fecha_asignacion" ColumnName="fecha_asignacion" />
+          <ScalarProperty Name="codigo_barras" ColumnName="codigo_barras" />
+          <ScalarProperty Name="id_clasificacion" ColumnName="id_clasificacion" />
+          <ScalarProperty Name="costo" ColumnName="costo" />
+          <ScalarProperty Name="fecha_adquisicion" ColumnName="fecha_adquisicion" />
+          <ScalarProperty Name="descripcion_detallada" ColumnName="descripcion_detallada" />
+          <ScalarProperty Name="nombre_corto" ColumnName="nombre_corto" />
+          <ScalarProperty Name="id_activo" ColumnName="id_activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PortalModelo.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="PortalModeloStoreContainer">
+    <EntitySet Name="permisos" EntityType="PortalModelo.Store.permisos" store:Type="Tables" Schema="corrales_portal" />
+    <EntitySet Name="usuarios" EntityType="PortalModelo.Store.usuarios" store:Type="Tables" Schema="corrales_portal" />
+  </EntityContainer>
+  <EntityType Name="permisos">
+    <Key>
+      <PropertyRef Name="idpermiso" />
+    </Key>
+    <Property Name="idpermiso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idusuario" Type="int" Nullable="false" />
+    <Property Name="idprograma" Type="int" Nullable="false" />
+    <Property Name="nivel" Type="int" Nullable="false" />
+    <Property Name="privilegios" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idusuario" />
+    </Key>
+    <Property Name="idusuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="usuario" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="clave" Type="char" Nullable="false" MaxLength="200" />
+    <Property Name="correo" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="acceso" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="id_empresa" Type="int" Nullable="false" />
+    <Property Name="vendedor" Type="int" Nullable="false" />
+    <Property Name="puesto" Type="char" Nullable="false" MaxLength="25" />
+    <Property Name="fechanacimiento" Type="datetime" Nullable="false" />
+    <Property Name="perfil" Type="int" Nullable="false" />
+    <Property Name="fechaalta" Type="date" Nullable="false" />
+    <Property Name="clavecorta" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+</Schema>

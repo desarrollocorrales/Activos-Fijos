@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ActivosFijosModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ActivosFijosModelStoreContainer">
+          <EntitySet Name="activos" EntityType="ActivosFijosModel.Store.activos" store:Type="Tables" Schema="corrales_activosfijos" />
+          <EntitySet Name="bitacora_activos" EntityType="ActivosFijosModel.Store.bitacora_activos" store:Type="Tables" Schema="corrales_activosfijos" />
+          <EntitySet Name="catalogo_estatus" EntityType="ActivosFijosModel.Store.catalogo_estatus" store:Type="Tables" Schema="corrales_activosfijos" />
+          <EntitySet Name="clasificaciones" EntityType="ActivosFijosModel.Store.clasificaciones" store:Type="Tables" Schema="corrales_activosfijos" />
+          <EntitySet Name="grupos" EntityType="ActivosFijosModel.Store.grupos" store:Type="Tables" Schema="corrales_activosfijos" />
+          <EntitySet Name="grupos_detalles" EntityType="ActivosFijosModel.Store.grupos_detalles" store:Type="Tables" Schema="corrales_activosfijos" />
+          <EntitySet Name="ubicaciones" EntityType="ActivosFijosModel.Store.ubicaciones" store:Type="Tables" Schema="corrales_activosfijos" />
+        </EntityContainer>
+        <EntityType Name="activos">
+          <Key>
+            <PropertyRef Name="id_activo" />
+          </Key>
+          <Property Name="id_activo" Type="uint" Nullable="false" />
+          <Property Name="nombre_corto" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="descripcion_detallada" Type="text" Nullable="false" />
+          <Property Name="fecha_adquisicion" Type="date" Nullable="false" />
+          <Property Name="costo" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="id_clasificacion" Type="uint" Nullable="false" />
+          <Property Name="codigo_barras" Type="varchar" Nullable="false" MaxLength="13" />
+          <Property Name="fecha_asignacion" Type="date" />
+          <Property Name="id_empleado" Type="int" />
+          <Property Name="id_ubicacion" Type="int" />
+          <Property Name="imagen" Type="longblob" />
+          <Property Name="idcompra" Type="uint" />
+          <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="bitacora_activos">
+          <Key>
+            <PropertyRef Name="fecha" />
+            <PropertyRef Name="hora" />
+            <PropertyRef Name="id_activo" />
+          </Key>
+          <Property Name="fecha" Type="date" Nullable="false" />
+          <Property Name="hora" Type="time" Nullable="false" />
+          <Property Name="id_activo" Type="uint" Nullable="false" />
+          <Property Name="id_usuario_creador" Type="uint" Nullable="false" />
+          <Property Name="accion" Type="text" Nullable="false" />
+          <Property Name="observaciones" Type="text" />
+        </EntityType>
+        <EntityType Name="catalogo_estatus">
+          <Key>
+            <PropertyRef Name="estatus" />
+          </Key>
+          <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="descripcion" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="clasificaciones">
+          <Key>
+            <PropertyRef Name="id_clasificacion" />
+          </Key>
+          <Property Name="id_clasificacion" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="grupos">
+          <Key>
+            <PropertyRef Name="id_grupo" />
+          </Key>
+          <Property Name="id_grupo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="grupos_detalles">
+          <Key>
+            <PropertyRef Name="id_grupo" />
+            <PropertyRef Name="id_activo" />
+          </Key>
+          <Property Name="id_grupo" Type="int" Nullable="false" />
+          <Property Name="id_activo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ubicaciones">
+          <Key>
+            <PropertyRef Name="id_ubicacion" />
+          </Key>
+          <Property Name="id_ubicacion" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="160" />
+          <Property Name="domicilio" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ActivosFijosModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ActivosFijosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="bitacora_activos" EntityType="ActivosFijosModel.bitacora_activos" />
+          <EntitySet Name="catalogo_estatus" EntityType="ActivosFijosModel.catalogo_estatus" />
+          <EntitySet Name="clasificaciones" EntityType="ActivosFijosModel.clasificaciones" />
+          <EntitySet Name="grupos" EntityType="ActivosFijosModel.grupos" />
+          <EntitySet Name="grupos_detalles" EntityType="ActivosFijosModel.grupos_detalles" />
+          <EntitySet Name="ubicaciones" EntityType="ActivosFijosModel.ubicaciones" />
+          <EntitySet Name="activos" EntityType="ActivosFijosModel.activos" />
+        </EntityContainer>
+        <EntityType Name="bitacora_activos">
+          <Key>
+            <PropertyRef Name="fecha" />
+            <PropertyRef Name="hora" />
+            <PropertyRef Name="id_activo" />
+          </Key>
+          <Property Name="fecha" Type="DateTime" Nullable="false" />
+          <Property Name="hora" Type="Time" Nullable="false" />
+          <Property Name="id_activo" Type="Int64" Nullable="false" />
+          <Property Name="id_usuario_creador" Type="Int64" Nullable="false" />
+          <Property Name="accion" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <Property Name="observaciones" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="catalogo_estatus">
+          <Key>
+            <PropertyRef Name="estatus" />
+          </Key>
+          <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="clasificaciones">
+          <Key>
+            <PropertyRef Name="id_clasificacion" />
+          </Key>
+          <Property Name="id_clasificacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="grupos">
+          <Key>
+            <PropertyRef Name="id_grupo" />
+          </Key>
+          <Property Name="id_grupo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="grupos_detalles">
+          <Key>
+            <PropertyRef Name="id_grupo" />
+            <PropertyRef Name="id_activo" />
+          </Key>
+          <Property Name="id_grupo" Type="Int32" Nullable="false" />
+          <Property Name="id_activo" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ubicaciones">
+          <Key>
+            <PropertyRef Name="id_ubicacion" />
+          </Key>
+          <Property Name="id_ubicacion" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="160" Unicode="false" FixedLength="false" />
+          <Property Name="domicilio" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="estatus" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="activos">
+          <Key>
+            <PropertyRef Name="id_activo" />
+          </Key>
+          <Property Type="Int64" Name="id_activo" Nullable="false" />
+          <Property Type="String" Name="nombre_corto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="descripcion_detallada" Nullable="false" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="fecha_adquisicion" Nullable="false" />
+          <Property Type="Decimal" Name="costo" Nullable="false" />
+          <Property Type="Int64" Name="id_clasificacion" Nullable="false" />
+          <Property Type="String" Name="codigo_barras" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="fecha_asignacion" />
+          <Property Type="Int32" Name="id_empleado" />
+          <Property Type="Int32" Name="id_ubicacion" />
+          <Property Type="Binary" Name="imagen" MaxLength="Max" FixedLength="false" />
+          <Property Type="Int64" Name="idcompra" />
+          <Property Type="String" Name="estatus" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ActivosFijosModelStoreContainer" CdmEntityContainer="ActivosFijosEntities">
+          <EntitySetMapping Name="bitacora_activos">
+            <EntityTypeMapping TypeName="ActivosFijosModel.bitacora_activos">
+              <MappingFragment StoreEntitySet="bitacora_activos">
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="hora" ColumnName="hora" />
+                <ScalarProperty Name="id_activo" ColumnName="id_activo" />
+                <ScalarProperty Name="id_usuario_creador" ColumnName="id_usuario_creador" />
+                <ScalarProperty Name="accion" ColumnName="accion" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="catalogo_estatus">
+            <EntityTypeMapping TypeName="ActivosFijosModel.catalogo_estatus">
+              <MappingFragment StoreEntitySet="catalogo_estatus">
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="clasificaciones">
+            <EntityTypeMapping TypeName="ActivosFijosModel.clasificaciones">
+              <MappingFragment StoreEntitySet="clasificaciones">
+                <ScalarProperty Name="id_clasificacion" ColumnName="id_clasificacion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="grupos">
+            <EntityTypeMapping TypeName="ActivosFijosModel.grupos">
+              <MappingFragment StoreEntitySet="grupos">
+                <ScalarProperty Name="id_grupo" ColumnName="id_grupo" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="grupos_detalles">
+            <EntityTypeMapping TypeName="ActivosFijosModel.grupos_detalles">
+              <MappingFragment StoreEntitySet="grupos_detalles">
+                <ScalarProperty Name="id_grupo" ColumnName="id_grupo" />
+                <ScalarProperty Name="id_activo" ColumnName="id_activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ubicaciones">
+            <EntityTypeMapping TypeName="ActivosFijosModel.ubicaciones">
+              <MappingFragment StoreEntitySet="ubicaciones">
+                <ScalarProperty Name="id_ubicacion" ColumnName="id_ubicacion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="domicilio" ColumnName="domicilio" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="activos">
+            <EntityTypeMapping TypeName="ActivosFijosModel.activos">
+              <MappingFragment StoreEntitySet="activos">
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="idcompra" ColumnName="idcompra" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
+                <ScalarProperty Name="id_ubicacion" ColumnName="id_ubicacion" />
+                <ScalarProperty Name="id_empleado" ColumnName="id_empleado" />
+                <ScalarProperty Name="fecha_asignacion" ColumnName="fecha_asignacion" />
+                <ScalarProperty Name="codigo_barras" ColumnName="codigo_barras" />
+                <ScalarProperty Name="id_clasificacion" ColumnName="id_clasificacion" />
+                <ScalarProperty Name="costo" ColumnName="costo" />
+                <ScalarProperty Name="fecha_adquisicion" ColumnName="fecha_adquisicion" />
+                <ScalarProperty Name="descripcion_detallada" ColumnName="descripcion_detallada" />
+                <ScalarProperty Name="nombre_corto" ColumnName="nombre_corto" />
+                <ScalarProperty Name="id_activo" ColumnName="id_activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModeloActivosFijos">
+        <EntityTypeShape EntityType="ActivosFijosModel.bitacora_activos" Width="1.5" PointX="2.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosModel.catalogo_estatus" Width="1.5" PointX="2.75" PointY="3.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosModel.clasificaciones" Width="1.5" PointX="4.75" PointY="0.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosModel.grupos" Width="1.5" PointX="4.75" PointY="3.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosModel.grupos_detalles" Width="1.5" PointX="6.75" PointY="0.75" Height="1.4033821614583326" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosModel.ubicaciones" Width="1.5" PointX="6.75" PointY="3.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ActivosFijosModel.activos" Width="1.5" PointX="0.75" PointY="0.875" Height="3.5186979166666674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ActivosFijosModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ActivosFijosModelStoreContainer">
+    <EntitySet Name="activos" EntityType="ActivosFijosModel.Store.activos" store:Type="Tables" Schema="corrales_activosfijos" />
+    <EntitySet Name="bitacora_activos" EntityType="ActivosFijosModel.Store.bitacora_activos" store:Type="Tables" Schema="corrales_activosfijos" />
+    <EntitySet Name="catalogo_estatus" EntityType="ActivosFijosModel.Store.catalogo_estatus" store:Type="Tables" Schema="corrales_activosfijos" />
+    <EntitySet Name="clasificaciones" EntityType="ActivosFijosModel.Store.clasificaciones" store:Type="Tables" Schema="corrales_activosfijos" />
+    <EntitySet Name="grupos" EntityType="ActivosFijosModel.Store.grupos" store:Type="Tables" Schema="corrales_activosfijos" />
+    <EntitySet Name="grupos_detalles" EntityType="ActivosFijosModel.Store.grupos_detalles" store:Type="Tables" Schema="corrales_activosfijos" />
+    <EntitySet Name="ubicaciones" EntityType="ActivosFijosModel.Store.ubicaciones" store:Type="Tables" Schema="corrales_activosfijos" />
+  </EntityContainer>
+  <EntityType Name="activos">
+    <Key>
+      <PropertyRef Name="id_activo" />
+    </Key>
+    <Property Name="id_activo" Type="uint" Nullable="false" />
+    <Property Name="nombre_corto" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="descripcion_detallada" Type="text" Nullable="false" />
+    <Property Name="fecha_adquisicion" Type="date" Nullable="false" />
+    <Property Name="costo" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+    <Property Name="id_clasificacion" Type="uint" Nullable="false" />
+    <Property Name="codigo_barras" Type="varchar" Nullable="false" MaxLength="13" />
+    <Property Name="fecha_asignacion" Type="date" />
+    <Property Name="id_empleado" Type="int" />
+    <Property Name="id_ubicacion" Type="int" />
+    <Property Name="imagen" Type="longblob" />
+    <Property Name="idcompra" Type="uint" />
+    <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="bitacora_activos">
+    <Key>
+      <PropertyRef Name="fecha" />
+      <PropertyRef Name="hora" />
+      <PropertyRef Name="id_activo" />
+    </Key>
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="hora" Type="time" Nullable="false" />
+    <Property Name="id_activo" Type="uint" Nullable="false" />
+    <Property Name="id_usuario_creador" Type="uint" Nullable="false" />
+    <Property Name="accion" Type="text" Nullable="false" />
+    <Property Name="observaciones" Type="text" />
+  </EntityType>
+  <EntityType Name="catalogo_estatus">
+    <Key>
+      <PropertyRef Name="estatus" />
+    </Key>
+    <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="descripcion" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="clasificaciones">
+    <Key>
+      <PropertyRef Name="id_clasificacion" />
+    </Key>
+    <Property Name="id_clasificacion" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="grupos">
+    <Key>
+      <PropertyRef Name="id_grupo" />
+    </Key>
+    <Property Name="id_grupo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="grupos_detalles">
+    <Key>
+      <PropertyRef Name="id_grupo" />
+      <PropertyRef Name="id_activo" />
+    </Key>
+    <Property Name="id_grupo" Type="int" Nullable="false" />
+    <Property Name="id_activo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ubicaciones">
+    <Key>
+      <PropertyRef Name="id_ubicacion" />
+    </Key>
+    <Property Name="id_ubicacion" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="160" />
+    <Property Name="domicilio" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="estatus" Type="char" Nullable="false" MaxLength="1" />
+  </EntityType>
+</Schema>
