@@ -161,7 +161,7 @@
             // 
             this.cmbAClasificacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbAClasificacion.FormattingEnabled = true;
-            this.cmbAClasificacion.Location = new System.Drawing.Point(255, 208);
+            this.cmbAClasificacion.Location = new System.Drawing.Point(256, 208);
             this.cmbAClasificacion.Name = "cmbAClasificacion";
             this.cmbAClasificacion.Size = new System.Drawing.Size(330, 25);
             this.cmbAClasificacion.TabIndex = 19;
@@ -170,7 +170,7 @@
             // 
             this.pbAImagen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbAImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAImagen.Location = new System.Drawing.Point(278, 239);
+            this.pbAImagen.Location = new System.Drawing.Point(279, 239);
             this.pbAImagen.Name = "pbAImagen";
             this.pbAImagen.Size = new System.Drawing.Size(247, 208);
             this.pbAImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -181,7 +181,7 @@
             // 
             this.btnACancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnACancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnACancelar.Location = new System.Drawing.Point(416, 458);
+            this.btnACancelar.Location = new System.Drawing.Point(417, 458);
             this.btnACancelar.Name = "btnACancelar";
             this.btnACancelar.Size = new System.Drawing.Size(95, 35);
             this.btnACancelar.TabIndex = 17;
@@ -193,7 +193,7 @@
             // 
             this.btnAGuardar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAGuardar.Location = new System.Drawing.Point(315, 458);
+            this.btnAGuardar.Location = new System.Drawing.Point(316, 458);
             this.btnAGuardar.Name = "btnAGuardar";
             this.btnAGuardar.Size = new System.Drawing.Size(95, 35);
             this.btnAGuardar.TabIndex = 16;
@@ -205,7 +205,7 @@
             // 
             this.btnABuscarImagen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnABuscarImagen.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnABuscarImagen.Location = new System.Drawing.Point(531, 239);
+            this.btnABuscarImagen.Location = new System.Drawing.Point(532, 239);
             this.btnABuscarImagen.Name = "btnABuscarImagen";
             this.btnABuscarImagen.Size = new System.Drawing.Size(77, 30);
             this.btnABuscarImagen.TabIndex = 15;
@@ -216,7 +216,7 @@
             // txbAIDCompra
             // 
             this.txbAIDCompra.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbAIDCompra.Location = new System.Drawing.Point(673, 211);
+            this.txbAIDCompra.Location = new System.Drawing.Point(674, 211);
             this.txbAIDCompra.Name = "txbAIDCompra";
             this.txbAIDCompra.Size = new System.Drawing.Size(104, 25);
             this.txbAIDCompra.TabIndex = 14;
@@ -226,7 +226,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(591, 214);
+            this.label7.Location = new System.Drawing.Point(592, 214);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 17);
             this.label7.TabIndex = 13;
@@ -235,7 +235,7 @@
             // dtpAFechaAdquisicion
             // 
             this.dtpAFechaAdquisicion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpAFechaAdquisicion.Location = new System.Drawing.Point(255, 177);
+            this.dtpAFechaAdquisicion.Location = new System.Drawing.Point(256, 177);
             this.dtpAFechaAdquisicion.Name = "dtpAFechaAdquisicion";
             this.dtpAFechaAdquisicion.Size = new System.Drawing.Size(330, 25);
             this.dtpAFechaAdquisicion.TabIndex = 12;
@@ -245,7 +245,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(218, 239);
+            this.label6.Location = new System.Drawing.Point(219, 239);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 17);
             this.label6.TabIndex = 10;
@@ -256,7 +256,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(166, 211);
+            this.label5.Location = new System.Drawing.Point(167, 211);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 17);
             this.label5.TabIndex = 8;
@@ -265,7 +265,7 @@
             // txbACosto
             // 
             this.txbACosto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbACosto.Location = new System.Drawing.Point(673, 180);
+            this.txbACosto.Location = new System.Drawing.Point(674, 180);
             this.txbACosto.Name = "txbACosto";
             this.txbACosto.Size = new System.Drawing.Size(104, 25);
             this.txbACosto.TabIndex = 7;
@@ -277,7 +277,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(621, 183);
+            this.label4.Location = new System.Drawing.Point(622, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 6;
@@ -288,7 +288,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(113, 180);
+            this.label3.Location = new System.Drawing.Point(114, 180);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(137, 17);
             this.label3.TabIndex = 4;
@@ -297,7 +297,7 @@
             // txbADescripcion
             // 
             this.txbADescripcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbADescripcion.Location = new System.Drawing.Point(255, 51);
+            this.txbADescripcion.Location = new System.Drawing.Point(256, 51);
             this.txbADescripcion.Multiline = true;
             this.txbADescripcion.Name = "txbADescripcion";
             this.txbADescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -309,7 +309,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(48, 54);
+            this.label2.Location = new System.Drawing.Point(49, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 17);
             this.label2.TabIndex = 2;
@@ -318,7 +318,7 @@
             // txbANombre
             // 
             this.txbANombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txbANombre.Location = new System.Drawing.Point(255, 20);
+            this.txbANombre.Location = new System.Drawing.Point(256, 20);
             this.txbANombre.Name = "txbANombre";
             this.txbANombre.Size = new System.Drawing.Size(330, 25);
             this.txbANombre.TabIndex = 1;
@@ -328,7 +328,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 23);
+            this.label1.Location = new System.Drawing.Point(153, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 17);
             this.label1.TabIndex = 0;
